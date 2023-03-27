@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" href="20200715_110623.jpg" style="width:100%">
+<title>دجاجي-نارو</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+.actv {
+  color: #FFFFFF;
+}
+.body {
+  text-align: center;
+}
+.emal:hover {
+  color: green;
+}
+.JB {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.JB:hover {
+  opacity: 1;
+}
+.JSP {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+}
+</style>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="my page.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">الصفحة الرئيسية</a>
+    <a href="#" class="actv">نارو</a>
+    <a href="my page3.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">كوكا</a>
+    <a href="my page4.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">المعرض</a>
+	<a href="loginar.html" target="_blank" class="w3-bar-item w3-button w3-text-grey w3-hover-black">تسجيل الدخول</a>
+	<a href="signupar.html" target="_blank" class="w3-bar-item w3-button w3-text-grey w3-hover-black">الإشتراك</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div style="background-color: #1abc9c;">
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h3 style="color: red;"><b>دجاجي</b></h3>
+  <br />
+  <br />
+  <img src="20200715_110623.jpg" width="320px" />
+  <br />
+  <br />
+  <br />
+  <br />
+</header>
+</div>
+</div>
+<div class="body">
+<h2>عني:</h2>
+	<img src="20200715_101840.jpg" style="width:400px;"> <p><h1> مرحبا أنا  <b>نارو</b> .عمري 6أشهر</h1></p>
+	<p><h3><b>صياح الديك نارو:</b></h3></p>
+    <video width="300" height="250" controls>
+    <source src="2.mp4" type="video/mp4">
+    <!-- commentaire -->
+    </video>
+<h2>لأجلك:</h2><br>
+<h4><b>تحميل </b> كتاب قصة <b> نارو </b></h4>
+<p>The data, Sep 20, 2020</p><br />
+ <a href="Naro Koko.ppsx" download>
+ <img src="ma.png" alt="إضغط هنا للتحميل" height="850px" />
+ </a><br><br>
+ <button class="JB" onclick="typeWriter()"><h3>معلومات مهمة عن الكتاب</h3></button>
+    <p id="emo"></p>
+    <script>
+    var i = 0;
+    var txt = 'هذا الكتاب سيجعلك تشعر بأن نارو معك أو أنت معه لذلك عليك بتحميله بسرعة قبل أن تنتهي النسخة المجانية.'
+	var speed = 200;
+
+   function typeWriter() {
+     if (i < txt.length) {
+     document.getElementById("emo").innerHTML += txt.charAt(i);
+     i++;
+     setTimeout(typeWriter, speed);
+  }
+}
+    </script>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <p class="w3-medium"><h2>تابعني:</h2></p><br>
+  <a href="https://www.youtube.com/channel/UC8RiAhx6wyY6NuCGuAbsK3Q" target="_blank" class="w3-hover-text-green">Youtube</a><br>
+  <a href="#" target="_blank" class="w3-hover-text-green">Busuu</a><br>
+  <p class="emal">lahcenelahcene1968@gmail.com:البريد الإلكتروني</p>
+  <h1>هل تحب نارو؟</h1>
+  	<button style="background-color: lightgreen;" onclick="alert ('أنت تحب نارو شكراّ')">نعم</button>
+	<button style="background-color: red;" onclick="alery()">لا</button>
+	  <h3>أكتب تعليقك هنا</h3>
+	  <form action="#">
+<input type="text" value="" id="myInput" placeholder="!سجل الدخول أو إشترك لتسجيل تعليقك">
+<button type="submit" style="background-color: green;" onclick="myunction()">أرسل</button>
+       </form>
+<br />
+<br />
+<script>
+function myunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("شكرا على تعليقك من فضلك إشترك لتسجيل تعليقك");
+}
+</script>
+<p id="demo" class="JSP"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 01, 2021 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</footer>
+ 
+<script>
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+function alery() {
+  alert ("إكتب في التعليقات لماذا لا تحب نارو؟")
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="20200715_110623.jpg" style="width:100%">
+<title>My Chickens</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.faeimg {
+  background-color: lightgray;
+  width: 100%
+  padding: 20px
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+h2 {
+   color: red;
+}
+
+.JB {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+}
+
+.JB:hover {
+  opacity: 1;
+}
+
+.btn {
+   background-color: green;
+}
+.botn {
+   background-color: lightgreen;
+}
+.boton {
+   background-color: red;
+}
+
+</style>
+<style>
+.JSP {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+.op-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 64px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=email], .form-container input[type=password], .form-container input[type=name] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=email]:focus, .form-container input[type=password]:focus, .form-container input[type=name]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover, .op-button:hover {
+  opacity: 1;
+}
+
+.sid {
+  background-color: black;
+  color: white;
+}
+.si {
+  background-color: black;
+  color: white;
+}
+.footbo {
+  background-color: #666;
+  color: white;
+}
+</style>
+<style>
+/* Dropdown Button */
+.dropbtn {
+  background-color: #FFFFFF;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #FFFFFF;
+}
+
+<!-- /* The container <div> - needed to position the dropdown content */ -->
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content button {
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+.darkmode {
+  background-color: #3498DB;
+  color: #FFFFFF;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.darkmode:hover, .darkmode:focus {
+  background-color: #2980B9;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+<p><h2>My Chickens</h2></p>
+<img src="D:\Yahya\my\pho\20200715_110623.jpg" style="width:320px">
+</div>
+
+<div class="navbar">
+  <a href="my page pc.html">Home</a>
+  <a href="#" class="active">Naro</a>
+  <a href="my page3 pc.html">Koka</a>
+  <a href="my page4 pc.html" class="right">Gallery</a>
+</div>
+
+<div class="row">
+  <div class="side" id="sidk">
+  <div class="dropdown">
+  <button onclick="dro()" class="dropbtn"><img src="PARA.png" alt="para" onclick="dro()" width="20px" height="20px"></button>
+  <div id="myDropdown" class="dropdown-content">
+  <button onclick="myF()" class="darkmode">dark mode</button>
+  </div>
+</div>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dro() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+    <h1>Of me:</h1>
+    <div class="fakeimg" style="height:400px;">
+	<img src="20200715_101840.jpg" style="height:215px"><br>
+	<p><h1>Hello, I'm Naro, I'm 6 mouths old, Bye.</h1></p>
+	</div>
+	<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Naro rooster crows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3> 
+    <div class="fakeimg" style="height:350px;">
+	<video width="300" height="250" controls>
+    <source src="2.mp4" type="video/mp4">
+    <!-- commentaire -->
+    </video>
+	</div><br><br>
+    <div class="fakeimg" style="height:60px;"></div><br>
+    <div class="faeimg" style="height:50px;"></div>
+  </div>
+  <div class="main" id="sid">
+    <h1>For you:</h1>
+    <h3>Download the book of the story of Naro</h3>
+    <h5>The date, Sep 20, 2020</h5>
+    <div class="fakeimg" style="height:900px;">
+	<a href="Naro Koko.ppsx" download>
+    <img src="C:\Users\Public\Pictures\Image2.png" alt="Click here to download it" height="850px">
+    </a>
+	</div>
+	<button class="JB" onclick="typeWriter()"><h3>Information about the book</h3></button>
+    <p id="emo"></p>
+    <script>
+    var i = 0;
+    var txt = 'This book will make you feel that Naro is with you or you are with him and that is a wonderful feeling, so hurry to download it before the free version ends.'
+	var speed = 200;
+
+   function typeWriter() {
+     if (i < txt.length) {
+     document.getElementById("emo").innerHTML += txt.charAt(i);
+     i++;
+     setTimeout(typeWriter, speed);
+  }
+}
+    </script>
+    <p></p>
+  </div>
+</div>
+
+<div class="footer" id="footerman">
+  <h3>Do you love Naro?</h3>
+<button class="botn" onclick="myFunction()">yes</button>
+<button class="boton" onclick="meFunction()">no</button>
+  <h3>your coment</h3>
+<input type="text" value="" id="myInput">
+<button class="btn" onclick="myunction()">send</button>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("So You Love Naro, Thank You!");
+}
+</script>
+<script>
+function meFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Tell Us In The Comments Why You Don't Love Naro.");
+}
+</script>
+<script>
+function myunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Thank You For Your Comment!");
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p id="demo" class="JSP"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 01, 2021 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</div>
+<button class="open-button" onclick="openForm()">Login</button>
+
+<div class="form-popup" id="myForm">
+  <form action="#" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<button class="op-button" onclick="opeForm()">SignUp</button>
+
+<div class="form-popup" id="mForm">
+  <form action="#" class="form-container">
+    <h1>SignUp</h1>
+	
+    <label for="name"><b>User Name</b></label>
+    <input type="name" placeholder="Enter your name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">SignUp</button>
+    <button type="button" class="btn cancel" onclick="closForm()">Close</button>
+  </form>
+</div>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<script>
+function opeForm() {
+  document.getElementById("mForm").style.display = "block";
+}
+
+function closForm() {
+  document.getElementById("mForm").style.display = "none";
+}
+</script>
+
+<script>
+function myF() {
+   var element = document.getElementById ("sidk") ;
+   var eleme = document.getElementById ("sid") ;
+   var ele = document.getElementById ("footerman") ;
+   element.classList.toggle("sid");
+   eleme.classList.toggle("si");
+   ele.classList.toggle("footbo");
+}
+</script>
+
+</body>
+</html>

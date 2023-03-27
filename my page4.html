@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" href="20200715_110623.jpg" style="width:100%">
+<title>My Chickens-Gellary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+.actv {
+  color: #FFFFFF;
+}
+.body {
+  text-align: center;
+}
+.emal:hover {
+  color: green;
+}
+
+</style>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="my page.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Home</a>
+    <a href="my page2.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Naro</a>
+    <a href="my page3.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Koka</a>
+    <a href="#" class="actv">Gellary</a>
+	<a href="login.html" target="_blank" class="w3-bar-item w3-button w3-text-grey w3-hover-black">LogIn</a>
+	<a href="signup.html" target="_blank" class="w3-bar-item w3-button w3-text-grey w3-hover-black">SignUp</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div style="background-color: #1abc9c;">
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h3 style="color: red;"><b>My Chickens</b></h3>
+  <br />
+  <br />
+  <img src="20200715_110623.jpg" width="320px" />
+  <br />
+  <br />
+  <br />
+  <br />
+</header>
+</div>
+</div>
+<div class="body">
+<h2>Photoes</h2>
+    <h5>Photoes	of Naro:</h5>
+	<img src="1.jpg" style="height:200px"><br>
+	<img src="2.jpg" style="height:150px">
+	<img src="3.jpg" style="height:150px"><br>
+	<img src="4.jpg" style="height:150px">
+	<img src="5.jpg" style="height:150px"><br>
+	<img src="6.jpg" style="height:150px">
+	<img src="7.jpg" style="height:150px"><br>
+	<img src="8.jpg" style="height:150px">
+	<img src="9.jpg" style="height:150px"><br>
+	<h5>Photoes of Koka:</h5>
+	<img src="20200111_123201.jpg" style="height:200px"><br>
+	<img src="20200312_121838.jpg" style="height:150px">
+	<img src="20200315_094155.jpg" style="height:150px"><br>
+	<img src="20200515_111332.jpg" style="height:200px"><br>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <p class="w3-medium"><h2>Fellow me:</h2></p><br>
+  <a href="https://www.youtube.com/channel/UC8RiAhx6wyY6NuCGuAbsK3Q" target="_blank" class="w3-hover-text-green">Youtube</a><br>
+  <a href="#" target="_blank" class="w3-hover-text-green">Busuu</a><br>
+  <p class="emal">email: lahcenelahcene1968@gmail.com</p>
+  <h1>Do you love my website?</h1>
+  	<button style="background-color: lightgreen;" onclick="alert ('So you love my website, Thank you!')">yes</button>
+	<button style="background-color: red;" onclick="alery()">no</button>
+	  <h3>Here your coment</h3>
+	  <form action="#">
+<input type="text" value="" id="myInput" placeholder="SignUp to save your comment!">
+<button type="submite" style="background-color: green;" onclick="myunction()">send</button>
+      </form>
+<script>
+function myunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Thank You For Your Comment! Pleas SignUp or LogIn to save your coment!");
+}
+</script>
+</footer>
+ 
+<script>
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+function alery() {
+  alert ("Tell Us In The Comments Why You Don't Love My Website.")
+}
+</script>
+
+</body>
+</html>
